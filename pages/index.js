@@ -3,7 +3,6 @@ import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import * as React from 'react';
-import Paper from '@mui/material/Paper';
 
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData();
@@ -16,7 +15,6 @@ export async function getStaticProps() {
 
 export default function Home() {
     return (
-        <Paper>
         <Layout home>
             <Head>
                 <title>{siteTitle}</title>
@@ -33,7 +31,5 @@ export default function Home() {
                 </section>  
             
         </Layout>
-        </Paper >
-           
     );
 }
